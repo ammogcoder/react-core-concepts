@@ -2,6 +2,19 @@
 
 React is a library for building user interfaces, composed of components. Components simply are just parts of a webpage. e.g. `header`,`navbar`, `sidebar`, `card`, `tab`, `footer` and so on. It is popular for building single page applications aka `SPA`
 
+**Table of content**
+
+<!-- prettier-ignore -->
+- [🚀 React Core Concepts in a nutshell](#-react-core-concepts-in-a-nutshell)
+	- [What are components?](#what-are-components)
+	- [Create component and return HTML](#create-component-and-return-html)
+	- [Pass data to a component as `props`](#pass-data-to-a-component-as-props)
+	- [Pass object to a component and access it](#pass-object-to-a-component-and-access-it)
+	- [Create multiple components dynamically](#create-multiple-components-dynamically)
+	- [Event, Component state, `setState()`, State hook](#event-component-state-setstate-state-hook)
+	- [Load data from API, `useEffect()`, Effect Hook](#load-data-from-api-useeffect-effect-hook)
+	- [Virtual DOM, diff algorithm, react fiber](#virtual-dom-diff-algorithm-react-fiber)
+
 To begin working on react, lets install it first. Follow along these commands:
 
 ```
@@ -10,7 +23,7 @@ cd my-app
 npm start
 ```
 
-### Folder structures
+**Folder structures, Emmet**
 
 running `create-react-app` will make all the folders and files to start building react applications.
 
@@ -26,7 +39,7 @@ Now edit `settings.json` to add magic on vscode, so that `emmet` will suggest to
 }
 ```
 
-## What are components ?
+## What are components?
 
 Its not rocket science to understand components 😉, one of the core concepts of modern `frontend` developments/technologies such as - `angular, react, vue` etc.
 
