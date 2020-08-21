@@ -285,6 +285,6 @@ export default App;
 
 -   **"React Fiber"** is an internal engine allows React to fine tune rendering to make sure the most important updates happen as soon as possible
 
-Thank you so mush for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
+Thank you so much for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
 
 Have fun, cheers! 🍻
