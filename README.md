@@ -284,3 +284,7 @@ export default App;
 -   **"Diff algorithm"** - React follows the observable pattern and listens for _state changes_. When the state of a component changes, React updates the _virtual DOM_ tree. Once the virtual DOM has been updated, React then _compares_ the _current_ version of the virtual DOM with the _previous_ version of the virtual DOM. This process is called **“diffing”**
 
 -   **"React Fiber"** is an internal engine allows React to fine tune rendering to make sure the most important updates happen as soon as possible
+
+Thank you so mush for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
+
+Have fun, cheers! 🍻
