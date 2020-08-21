@@ -279,7 +279,7 @@ export default App;
 
 -   **“Document Object Model”** - The DOM in simple words represents the UI of your application,represented as a tree data structure. The changes and updates to the DOM are fast. But after the change, the updated element and it’s children have to be re-rendered to update the application UI. This makes DOM manipulation slower.
 
-*   The **"virtual DOM"** is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM. This updated DOM is then batch updated to the real DOM.
+*   The **"virtual DOM"** is only a virtual representation of the DOM. Every time the state of our application changes, the virtual DOM gets updated instead of the real DOM. This updated DOM is then batch updated to the real DOM.
 
 -   **"Diff algorithm"** - React follows the observable pattern and listens for _state changes_. When the state of a component changes, React updates the _virtual DOM_ tree. Once the virtual DOM has been updated, React then _compares_ the _current_ version of the virtual DOM with the _previous_ version of the virtual DOM. This process is called **“diffing”**
 
