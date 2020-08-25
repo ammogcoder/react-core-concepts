@@ -3,15 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-	const nayoks = [
-		"Razzak",
-		"Alamgir",
-		"Salman Shah",
-		"Elias Kanchan",
-		"Omor Suny",
-		"Shuvo",
-		"Tahsan",
-	];
+	const nayoks = ["Razzak", "Alamgir", "Salman Shah", "Elias Kanchan", "Omor Suny", "Shuvo", "Tahsan"];
 	const products = [
 		{ name: "Photoshop", price: "$4.00" },
 		{ name: "Figma", price: "$5.00" },
@@ -70,9 +62,8 @@ function Users() {
 							border: "1px solid pink",
 							margin: "3px",
 							padding: "10px",
-							width: "300px",
-						}}
-					>
+							width: "400px",
+						}}>
 						{user.name}, <br />
 						{user.phone},<br />
 						{user.email}

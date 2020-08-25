@@ -1,6 +1,6 @@
 # 🚀 React Core Concepts in a nutshell
 
-React is a library for building user interfaces, composed of components. Components simply are just parts of a webpage. e.g. `header`,`navbar`, `sidebar`, `card`, `tab`, `footer` and so on. It is popular for building single page applications aka `SPA`
+React is a library for building user interfaces, composed of components. Components simply are just parts of a webpage. e.g. `header`,`navbar`, `sidebar`, `card`, `tab`, `footer` and so on. It is popular for building single-page applications aka `SPA`
 
 **Table of content**
 
@@ -8,6 +8,7 @@ React is a library for building user interfaces, composed of components. Compone
 - [🚀 React Core Concepts in a nutshell](#-react-core-concepts-in-a-nutshell)
 	- [What are components?](#what-are-components)
 	- [Create component and return HTML](#create-component-and-return-html)
+	- [What are "props" and "state" ?](#what-are-props-and-state)
 	- [Pass data to a component as `props`](#pass-data-to-a-component-as-props)
 	- [Pass object to a component and access it](#pass-object-to-a-component-and-access-it)
 	- [Create multiple components dynamically](#create-multiple-components-dynamically)
@@ -15,7 +16,7 @@ React is a library for building user interfaces, composed of components. Compone
 	- [Load data from API, `useEffect()`, Effect Hook](#load-data-from-api-useeffect-effect-hook)
 	- [Virtual DOM, diff algorithm, react fiber](#virtual-dom-diff-algorithm-react-fiber)
 
-To begin working on react, lets install it first. Follow along these commands:
+To begin working on react let's install it first. Follow along with these commands:
 
 ```
 npx create-react-app my-app
@@ -73,6 +74,17 @@ Now you can use this component inside `App()` as this `<HelloWorld></HelloWorld>
 
 you'll see `Hello World!` is showing on the browser.
 
+## What are "props" and "state" ?
+
+-   `props` an object to send data from and/to components. As the basic of react's functionality is building components, in order to interconnect with one component to another you need to pass data. That is where you use it, e.g. `<HelloWorld name="Jhon Doe"></HelloWorld>` here in HelloWorld.js name can be accessed as `{props.name}`
+
+-   `state` simply state is current status of a component. Suppose, there is a button and when its clicked then you wanna show the number how many times it is clicked. So you have to keep track of it, right? So here comes state.There are two things to know,
+
+    1. `state variable`  - to keep track of the status and,
+    2. `setState()` - update the status to the DOM.
+
+-   `const [count, setCount] = useState(0)`- Don't you worry about it, you'll definitely see it in action down below. Just remember this syntax for now.
+
 ## Pass data to a component as `props`
 
 This `HelloWorld` component will always display `Hello World!` how many times you write it. To show different data `props` is used.
@@ -81,8 +93,8 @@ This `HelloWorld` component will always display `Hello World!` how many times yo
 function App() {
 	return (
 		<div>
-			<HelloWorld name='Hello World'></HelloWorld>
-			<HelloWorld name='Hello Bangladesh'></HelloWorld>
+			<HelloWorld name="Hello World"></HelloWorld>
+			<HelloWorld name="Hello Bangladesh"></HelloWorld>
 		</div>
 	);
 }
@@ -119,12 +131,8 @@ function App() {
 
 	return (
 		<div>
-			<Products
-				name={products[0].name}
-				price={products[0].price}></Products>
-			<Products
-				name={products[1].name}
-				price={products[1].price}></Products>
+			<Products name={products[0].name} price={products[0].price}></Products>
+			<Products name={products[1].name} price={products[1].price}></Products>
 		</div>
 	);
 }
@@ -244,6 +252,8 @@ function Counter() {
 export default App;
 ```
 
+<img src ="https://miro.medium.com/max/671/1*51YObXpAB2gkxtvjA3yUuw.png" width="auto"/>
+
 ## Load data from API, `useEffect()`, Effect Hook
 
 The Effect Hook lets you perform `side effects` in function components. e.g, data fetching, setting up a subscription, and manually changing the DOM in React components and son on.
@@ -262,6 +272,12 @@ function App() {
 }
 
 function Users() {
+	const style = {
+		textAlign: "left",
+		listStyle: "none",
+		margin: "0",
+		padding: "0",
+	};
 	const [users, setUsers] = useState([]);
 	useEffect(() => {
 		fetch("https://jsonplaceholder.typicode.com/users")
@@ -272,9 +288,15 @@ function Users() {
 	return (
 		<div>
 			<h3>Dynamic users: {users.length} </h3>
-			<ul>
+			<ul style={style}>
 				{users.map((user) => (
-					<li>
+					<li
+						style={{
+							border: "1px solid pink",
+							margin: "3px",
+							padding: "10px",
+							width: "400px",
+						}}>
 						{user.name}, <br />
 						{user.phone},<br />
 						{user.email}
@@ -287,6 +309,8 @@ function Users() {
 
 export default App;
 ```
+
+<img src ="https://miro.medium.com/max/700/1*djlqSxeYI2wUsiwYzaHoAA.png" width="auto"/>
 
 ## Virtual DOM, diff algorithm, react fiber
 
